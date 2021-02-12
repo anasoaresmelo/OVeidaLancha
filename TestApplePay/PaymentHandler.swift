@@ -25,9 +25,9 @@ var completionHandler: PaymentCompletionHandler?
 
 func startPayment(completion: @escaping PaymentCompletionHandler) {
 
-    let amount = PKPaymentSummaryItem(label: "Ammount", amount: NSDecimalNumber(string: "8.88"), type: .final)
-    let tax = PKPaymentSummaryItem(label: "Tax", amount: NSDecimalNumber(string: "1.12"), type: .final)
-    let total = PKPaymentSummaryItem(label: "ToTal", amount: NSDecimalNumber(string: "10.00"), type: .pending)
+    let amount = PKPaymentSummaryItem(label: "Ammount", amount: NSDecimalNumber(string: "10.00"), type: .final)
+    let tax = PKPaymentSummaryItem(label: "Tax", amount: NSDecimalNumber(string: "54.75"), type: .final)
+    let total = PKPaymentSummaryItem(label: "ToTal", amount: NSDecimalNumber(string: "84.75"), type: .final)
 
     paymentSummaryItems = [amount, tax, total];
     completionHandler = completion
@@ -35,10 +35,10 @@ func startPayment(completion: @escaping PaymentCompletionHandler) {
     // Create our payment request
     let paymentRequest = PKPaymentRequest()
     paymentRequest.paymentSummaryItems = paymentSummaryItems
-    paymentRequest.merchantIdentifier = "merchant.com.YOURDOMAIN.YOURAPPNAME"
+    paymentRequest.merchantIdentifier = "merchant.br.ufpe.cin.academy-acsm.TestApplePay"
     paymentRequest.merchantCapabilities = .capability3DS
-    paymentRequest.countryCode = "US"
-    paymentRequest.currencyCode = "USD"
+    paymentRequest.countryCode = "BR"
+    paymentRequest.currencyCode = "BRL"
     paymentRequest.requiredShippingContactFields = [.phoneNumber, .emailAddress]
     paymentRequest.supportedNetworks = PaymentHandler.supportedNetworks
 
