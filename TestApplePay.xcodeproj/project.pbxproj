@@ -22,6 +22,7 @@
 		0E57415F25D567C000246623 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0E57416125D567C000246623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E57416825D567EA00246623 /* PaymentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentHandler.swift; sourceTree = "<group>"; };
+		0EADCCBA25D69A76005738E6 /* TestApplePay.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TestApplePay.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +55,7 @@
 		0E57415725D567BE00246623 /* TestApplePay */ = {
 			isa = PBXGroup;
 			children = (
+				0EADCCBA25D69A76005738E6 /* TestApplePay.entitlements */,
 				0E57415825D567BE00246623 /* TestApplePayApp.swift */,
 				0E57415A25D567BE00246623 /* ContentView.swift */,
 				0E57416825D567EA00246623 /* PaymentHandler.swift */,
@@ -271,8 +273,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TestApplePay/TestApplePay.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TestApplePay/Preview Content\"";
+				DEVELOPMENT_TEAM = W55SS6QX3U;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TestApplePay/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -292,8 +296,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TestApplePay/TestApplePay.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TestApplePay/Preview Content\"";
+				DEVELOPMENT_TEAM = W55SS6QX3U;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TestApplePay/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

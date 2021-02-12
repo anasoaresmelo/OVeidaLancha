@@ -11,7 +11,23 @@ import PassKit
 
 struct ContentView: View {
     var body: some View {
-        PaymentButton()
+        ZStack {
+            Image("olhaoL")
+                .resizable()
+                .scaledToFill()
+                .ignoresSafeArea()
+
+            VStack {
+                Text("Mande um mimo! \nGaranta o L do seu amigo")
+                    .fontWeight(.medium)
+                    .offset(y: 100)
+                    .font(.title).multilineTextAlignment(.center)
+                Spacer()
+                PaymentButton()
+                    .padding(.bottom, 130)
+            }.frame(alignment: .center)
+        }
+        
     }
 }
 
@@ -42,7 +58,7 @@ struct PaymentButtonStyle: ButtonStyle {
 struct PaymentButtonHelper: View {
     var body: some View {
         PaymentButtonRepresentable()
-            .frame(minWidth: 100, maxWidth: 400)
+            .frame(minWidth: 100, maxWidth: 300)
             .frame(height: 60)
             .frame(maxWidth: .infinity)
     }
